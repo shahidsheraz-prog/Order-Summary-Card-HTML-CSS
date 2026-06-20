@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background: url(./images/pattern-background-mobile.svg) top / contain no-repeat, #e0e8ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+@media (min-width: 769px) {
+    body {
+        background: url(./images/pattern-background-desktop.svg) top / contain no-repeat, #e0e8ff;
+    }
+}
+
+.card {
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(56, 41, 224, 0.12);
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+.card-body {
+    padding: clamp(24px, 5vw, 40px);
+    text-align: center;
+}
+
+.card-body h1 {
+    font-size: clamp(1.3rem, 4vw, 1.65rem);
+    font-weight: 900;
+    color: #1f2f56;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #7280a7;
+    line-height: 1.65;
+    max-width: 320px;
+    margin: 0 auto 24px;
+}
+
+.plan-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fe;
+    border-radius: 12px;
+    padding: clamp(14px, 3vw, 20px);
+    margin-bottom: 28px;
+    gap: 12px;
+}
+
+.plan-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.plan-info img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.plan-info div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.plan-title {
+    font-weight: 900;
+    color: #1f2f56;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.plan-price {
+    color: #7280a7;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    margin-top: 2px;
+}
+
+.change-link {
+    color: #3829e0;
+    font-weight: 700;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    text-decoration: underline;
+    white-space: nowrap;
+    transition: opacity 0.2s, text-decoration 0.2s;
+}
+
+.change-link:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.2s;
+}
+
+.btn-primary {
+    background: #3829e0;
+    color: #fff;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 24px rgba(56, 41, 224, 0.25);
+}
+
+.btn-primary:hover {
+    opacity: 0.75;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #7280a7;
+}
+
+.btn-cancel:hover {
+    color: #1f2f56;
+}
+
+@media (max-width: 480px) {
+    .card {
+        border-radius: 16px;
+    }
+
+    .plan-card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 16px;
+    }
+
+
+}
